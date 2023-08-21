@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StorepersonalInfoRequest;
-use App\Http\Requests\UpdatepersonalInfoRequest;
 use App\Models\personalInfo;
 use Illuminate\Support\Facades\Validator;
 use Exception;
