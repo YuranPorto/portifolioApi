@@ -65,8 +65,11 @@ class TechnologiesController extends Controller
     public function destroy($id)
     {
         try {
+            $getTechnologies = technologies::find($id);
+            $tecName = $getTechnologies->name;
             technologies::destroy($id);
-            return response()->json(["success" => "Tecnologia excluidas com sucesso"], 204);
+
+            return response()->json(["success" => "Tecnologia $tecName excluidas com sucesso"], 204);
         } catch (Exception $e) {
             return $e->getMessage();
         }

@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class social extends Model
 {
+    protected $fillable = ["name", "icon", "link"];
     use HasFactory;
 }
